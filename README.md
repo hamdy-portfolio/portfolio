@@ -1,96 +1,80 @@
-# 🌐 Portfolio – Hamdy TABSISSI
+# 🚀 Hamdy TABSISSI — Cloud & DevSecOps Engineer
 
-> **Cloud & DevOps Engineer**
-> Passionné par l’automatisation, l’optimisation des infrastructures Cloud et la cybersécurité.
-> Basé à **Paris / Melbourne** — ouvert aux opportunités internationales.
+Créer des plateformes résilientes, automatisées et sûres : voilà ma zone de confort. Basé entre **Paris** et **Melbourne**, j’accompagne les équipes produit qui veulent accélérer sans compromettre la sécurité.
 
 ---
 
-## 👨‍💻 À propos de moi
-
-Ingénieur diplômé en **Cybersécurité** et **Systèmes, Réseaux & Cloud**, je conçois et sécurise des environnements Cloud (AWS, Azure, GCP).
-Je cherche à rejoindre une équipe où je pourrais **automatiser, déployer et sécuriser** des infrastructures à grande échelle.
-
-💡 **Objectif :** allier efficacité technique et sécurité pour accompagner la transformation Cloud des entreprises.
+## 🧭 Ce qui m'anime
+- Mettre de l’ordre dans la complexité Cloud et multicloud.
+- Industrialiser les bonnes pratiques DevSecOps pour livrer plus vite, avec moins de stress.
+- Détecter les failles avant qu’elles ne deviennent critiques.
 
 ---
 
-## ⚙️ Compétences techniques
-
-| Domaine | Compétences |
-|----------|-------------|
-| **Cloud** | AWS, Azure, GCP |
-| **Infrastructure as Code (IaC)** | Terraform, Ansible |
-| **CI/CD** | GitHub Actions, Jenkins, GitLab CI |
-| **Conteneurisation** | Docker, Kubernetes |
-| **Systèmes** | Linux (Ubuntu, CentOS), Windows Server |
-| **Sécurité** | IAM, VPN, Firewalls, ISO27001 awareness |
-| **Langages / Scripting** | Python, Bash, YAML |
-| **Outils de supervision** | Prometheus, Grafana, CloudWatch |
+## 🤝 Mes engagements terrain
+| Engagement | Concrètement |
+|------------|--------------|
+| **Automatisation pragmatique** | Pipelines CI/CD codés sur mesure, alertes pertinentes uniquement. |
+| **Culture sécurité by design** | Politiques IAM strictes, Zero Trust, revue des accès continue. |
+| **Transparence** | Tableaux de bord temps réel partagés avec les équipes produit & direction. |
 
 ---
 
-## 🚀 Projets récents
+## 🏗️ Projets signatures & impacts
+### 1. Plateforme AWS industrialisée
+> Terraform • GitHub Actions • AWS ECS • Grafana
+- Provisionnement modulaire (12 modules Terraform) couvrant VPC, réseaux, IAM et workloads.
+- Déploiement blue/green automatisé réduisant de 45% les interruptions perçues.
+- Observabilité consolidée : 25 alertes dynamiques via CloudWatch + Grafana.
 
-### 🔹 AWS Infrastructure Automation
-Déploiement complet d’une infrastructure sur AWS avec Terraform :
-- VPC, Subnets, Security Groups
-- EC2 auto-scalées + Load Balancer
-- Monitoring CloudWatch intégré
+### 2. Chaîne CI/CD conteneurisée
+> Docker • GitHub Actions • Trivy • Slack API
+- Build, test et déploiement continus pour 7 microservices en <8 minutes.
+- Analyse de sécurité Trivy intégrée ; seuil de CVE critiques ramené à zéro avant prod.
+- Notifications Slack actionnables avec logs et liens de rollback.
 
-📦 *Stack : Terraform, AWS CLI, GitHub Actions*
-
----
-
-### 🔹 Pipeline CI/CD avec GitHub Actions
-Mise en place d’une chaîne CI/CD pour automatiser le déploiement d’une application Dockerisée.
-- Build + Test + Deploy
-- Gestion des secrets via GitHub Secrets
-- Notifications Slack en cas d’échec
-
-📦 *Stack : Docker, GitHub Actions, AWS ECS*
-
----
-
-### 🔹 Monitoring Kubernetes
-Création d’un dashboard complet pour le monitoring des pods Kubernetes.
-- Installation Prometheus + Grafana via Helm
-- Alerting configuré
-- Visualisation temps réel des métriques cluster
-
-📦 *Stack : Kubernetes, Helm, Grafana, Prometheus*
+### 3. Monitoring Kubernetes pilotable
+> Kubernetes • Helm • Prometheus Operator • KEDA
+- Dashboard unifié pour 5 clusters hétérogènes (on-prem & cloud).
+- Autoscaling basé sur métriques métier, -30% de surprovisionnement.
+- Alerting multi-canaux (PagerDuty, mail, webhook sécurité).
 
 ---
 
-## 🎓 Formation & Certifications
-
-🎓 **Master Cybersécurité** – SUP de Vinci (La Défense)
-🎓 **Bachelor Systèmes, Réseaux & Cloud** – ESGI
-🎓 **DUT Réseaux & Télécoms** – IUT Cachan
-
-🏅 **Certifications :**
-- AWS Cloud Practitioner ✅
-- Microsoft Azure Fundamentals (AZ-900) – *en cours*
-
----
-
-## 🌍 Langues
-
-- 🇫🇷 Français – natif
-- 🇬🇧 Anglais – professionnel (séjour à Toronto, ILAC)
+## 🧰 Stack de confiance
+**Cloud** : AWS, Azure, GCP  
+**IaC** : Terraform, Ansible, Helm  
+**CI/CD** : GitHub Actions, Jenkins, GitLab CI  
+**Conteneurs** : Docker, Kubernetes, ECS, EKS  
+**Observabilité** : Prometheus, Grafana, CloudWatch, Loki  
+**Sécurité** : IAM, SSO, Secrets Manager, policies Zero Trust  
+**Langages & scripts** : Python, Bash, Go (notions), YAML  
+**Systèmes** : Linux (Ubuntu, CentOS), Windows Server
 
 ---
 
-## 🔗 Me retrouver
-
-📧 **hamdytabsissi@protonmail.com**
-💼 [LinkedIn](https://linkedin.com/in/hamdytabsissi)
-💻 [GitHub](https://github.com/hamdytabsissi)
-🌐 [Portfolio Web (à venir)](https://hamdytabsissi.github.io/Portfolio-Ambi)
+## 🎓 Parcours & certifications
+- 🎓 **Master Cybersécurité** — SUP de Vinci (La Défense)
+- 🎓 **Bachelor Systèmes, Réseaux & Cloud** — ESGI
+- 🎓 **DUT Réseaux & Télécoms** — IUT Cachan
+- 🏅 **AWS Cloud Practitioner** — obtenu 2023
+- 🏅 **Microsoft Azure Fundamentals (AZ-900)** — en cours
 
 ---
 
-## 💬 Citation
+## 🌍 Langues & ADN international
+- 🇫🇷 Français — natif
+- 🇬🇧 Anglais — professionnel (Toronto, ILAC)
+- 🌐 Travail en équipes distribuées Europe/APAC
 
-> “Automate everything. Secure everything.”
-> — *Ma devise de DevSecOps*
+---
+
+## 📬 Contact
+- ✉️ **hamdytabsissi@protonmail.com**
+- 💼 [LinkedIn](https://linkedin.com/in/hamdytabsissi)
+- 💻 [GitHub](https://github.com/hamdytabsissi)
+- 🌐 [Portfolio Web](https://hamdytabsissi.github.io/Portfolio-Ambi)
+
+---
+
+> "Automate everything. Secure everything." — ma devise DevSecOps
