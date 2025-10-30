@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Hamdy TABSISSI</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f9fbfd;
+        --fg: #1d1f21;
+        --accent: #2563eb;
+        --border: #d0d7de;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--bg);
+        color: var(--fg);
+        line-height: 1.6;
+      }
+
+      main {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+
+      h1 {
+        font-size: clamp(2.25rem, 4vw, 2.9rem);
+        margin-bottom: 0.4em;
+        letter-spacing: -0.02em;
+      }
+
+      h2 {
+        margin-top: 2.8rem;
+        margin-bottom: 1.2rem;
+        font-size: clamp(1.6rem, 3vw, 2rem);
+      }
+
+      h3 {
+        margin-top: 2rem;
+        margin-bottom: 0.6rem;
+        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 2.5rem 0;
+      }
+
+      blockquote {
+        border-left: 4px solid var(--accent);
+        padding-left: 16px;
+        margin: 0;
+        font-size: 1.05rem;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0 0;
+      }
+
+      th,
+      td {
+        border: 1px solid var(--border);
+        padding: 10px 12px;
+        text-align: left;
+      }
+
+      ul {
+        padding-left: 1.1rem;
+      }
+
+      .tagline {
+        font-size: 1.05rem;
+        margin: 0.6rem 0 0;
+      }
+
+      .contact-links a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .contact-links a:hover,
+      .contact-links a:focus {
+        text-decoration: underline;
+      }
+
+      footer {
+        margin-top: 3rem;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>🌐 Portfolio – Hamdy TABSISSI</h1>
+        <blockquote>
+          <p><strong>Cloud &amp; DevOps Engineer</strong></p>
+          <p>Passionné par l’automatisation, l’optimisation des infrastructures Cloud et la cybersécurité.</p>
+          <p>Basé à <strong>Paris / Melbourne</strong> — ouvert aux opportunités internationales.</p>
+        </blockquote>
+      </header>
+
+      <hr />
+
+      <section>
+        <h2>👨‍💻 À propos de moi</h2>
+        <p>
+          Ingénieur diplômé en <strong>Cybersécurité</strong> et <strong>Systèmes, Réseaux &amp; Cloud</strong>, je conçois et sécurise des
+          environnements Cloud (AWS, Azure, GCP). Je cherche à rejoindre une équipe où je pourrais
+          <strong>automatiser, déployer et sécuriser</strong> des infrastructures à grande échelle.
+        </p>
+        <p class="tagline">
+          💡 <strong>Objectif :</strong> allier efficacité technique et sécurité pour accompagner la transformation Cloud des entreprises.
+        </p>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>⚙️ Compétences techniques</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Domaine</th>
+              <th>Compétences</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Cloud</strong></td>
+              <td>AWS, Azure, GCP</td>
+            </tr>
+            <tr>
+              <td><strong>Infrastructure as Code (IaC)</strong></td>
+              <td>Terraform, Ansible</td>
+            </tr>
+            <tr>
+              <td><strong>CI/CD</strong></td>
+              <td>GitHub Actions, Jenkins, GitLab CI</td>
+            </tr>
+            <tr>
+              <td><strong>Conteneurisation</strong></td>
+              <td>Docker, Kubernetes</td>
+            </tr>
+            <tr>
+              <td><strong>Systèmes</strong></td>
+              <td>Linux (Ubuntu, CentOS), Windows Server</td>
+            </tr>
+            <tr>
+              <td><strong>Sécurité</strong></td>
+              <td>IAM, VPN, Firewalls, ISO27001 awareness</td>
+            </tr>
+            <tr>
+              <td><strong>Langages / Scripting</strong></td>
+              <td>Python, Bash, YAML</td>
+            </tr>
+            <tr>
+              <td><strong>Outils de supervision</strong></td>
+              <td>Prometheus, Grafana, CloudWatch</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>🚀 Projets récents</h2>
+        <article>
+          <h3>🔹 AWS Infrastructure Automation</h3>
+          <p>Déploiement complet d’une infrastructure sur AWS avec Terraform :</p>
+          <ul>
+            <li>VPC, Subnets, Security Groups</li>
+            <li>EC2 auto-scalées + Load Balancer</li>
+            <li>Monitoring CloudWatch intégré</li>
+          </ul>
+          <p>📦 <em>Stack : Terraform, AWS CLI, GitHub Actions</em></p>
+        </article>
+
+        <article>
+          <h3>🔹 Pipeline CI/CD avec GitHub Actions</h3>
+          <p>Mise en place d’une chaîne CI/CD pour automatiser le déploiement d’une application Dockerisée.</p>
+          <ul>
+            <li>Build + Test + Deploy</li>
+            <li>Gestion des secrets via GitHub Secrets</li>
+            <li>Notifications Slack en cas d’échec</li>
+          </ul>
+          <p>📦 <em>Stack : Docker, GitHub Actions, AWS ECS</em></p>
+        </article>
+
+        <article>
+          <h3>🔹 Monitoring Kubernetes</h3>
+          <p>Création d’un dashboard complet pour le monitoring des pods Kubernetes.</p>
+          <ul>
+            <li>Installation Prometheus + Grafana via Helm</li>
+            <li>Alerting configuré</li>
+            <li>Visualisation temps réel des métriques cluster</li>
+          </ul>
+          <p>📦 <em>Stack : Kubernetes, Helm, Grafana, Prometheus</em></p>
+        </article>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>🎓 Formation &amp; Certifications</h2>
+        <ul>
+          <li>🎓 <strong>Master Cybersécurité</strong> – SUP de Vinci (La Défense)</li>
+          <li>🎓 <strong>Bachelor Systèmes, Réseaux &amp; Cloud</strong> – ESGI</li>
+          <li>🎓 <strong>DUT Réseaux &amp; Télécoms</strong> – IUT Cachan</li>
+        </ul>
+        <p>🏅 <strong>Certifications :</strong></p>
+        <ul>
+          <li>AWS Cloud Practitioner ✅</li>
+          <li>Microsoft Azure Fundamentals (AZ-900) – <em>en cours</em></li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>🌍 Langues</h2>
+        <ul>
+          <li>🇫🇷 Français – natif</li>
+          <li>🇬🇧 Anglais – professionnel (séjour à Toronto, ILAC)</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>🔗 Me retrouver</h2>
+        <ul class="contact-links">
+          <li>📧 <strong>hamdytabsissi@protonmail.com</strong></li>
+          <li>💼 <a href="https://linkedin.com/in/hamdytabsissi">LinkedIn</a></li>
+          <li>💻 <a href="https://github.com/hamdytabsissi">GitHub</a></li>
+          <li>🌐 <a href="https://hamdytabsissi.github.io/Portfolio-Ambi">Portfolio Web (à venir)</a></li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <footer>
+        <blockquote>
+          <p>“Automate everything. Secure everything.”<br />— <em>Ma devise de DevSecOps</em></p>
+        </blockquote>
+      </footer>
+    </main>
+  </body>
+</html>
