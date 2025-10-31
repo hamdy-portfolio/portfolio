@@ -1,49 +1,62 @@
 # Hamdy TABSISSI — Cloud & DevSecOps Engineer
 
-Basé entre **Paris** et **Melbourne**, j’aide les équipes produit à livrer rapidement des plateformes Cloud fiables sans sacrifier la sécurité.
+Basé entre **Paris** et **Melbourne**, j'aide les équipes produit à faire grandir leurs plateformes Cloud avec une exigence : **tout automatiser, tout sécuriser, sans ralentir la livraison**. J'interviens du cadrage à l'observabilité, en gardant l'utilisateur final comme boussole.
 
 ---
 
-## Ce que j’apporte
-- Automatisation de pipelines CI/CD et d’infrastructures répétables.
-- Gouvernance sécurité intégrée : IAM, Zero Trust, revues d’accès continues.
-- Tableaux de bord clairs pour partager l’état de santé des plateformes.
+## Ce qui me drive
+- Transformer l'infrastructure en produit : pipelines IaC, tests automatisés, gouvernance claire.
+- Faire collaborer Dev, Ops et Security autour d'alertes actionnables et de SLO partagés.
+- Réduire les risques humains via la documentation vivante, la revue de code et la montée en compétence des équipes.
 
 ---
 
-## Compétences clés
-| Domaine | Technologies |
+## Engagements DevSecOps
+1. **Sécurité par design** : IAM Zero Trust, politiques least privilege, secrets gérés en pipeline.
+2. **Livraison continue maîtrisée** : revues automatiques, scans de sécurité, approbations contextualisées.
+3. **Mesure de la valeur** : indicateurs de résilience, de dette sécurité et de coût cloud partagés avec les parties prenantes.
+
+---
+
+## Stack de prédilection
+| Domaine | Technologies clés |
 | --- | --- |
 | Cloud | AWS, Azure, GCP |
-| IaC | Terraform, Ansible, Helm |
-| CI/CD | GitHub Actions, Jenkins, GitLab CI |
-| Conteneurisation | Docker, Kubernetes, ECS, EKS |
-| Observabilité | Prometheus, Grafana, CloudWatch, Loki |
-| Sécurité | IAM, SSO, secrets management, Zero Trust |
-| Langages | Python, Bash, YAML |
+| Infrastructure as Code | Terraform, Terragrunt, Ansible, Helm |
+| CI/CD | GitHub Actions, Jenkins, GitLab CI, Argo CD |
+| Conteneurs & Orchestration | Docker, Kubernetes, ECS/EKS, Helmfile |
+| Observabilité | Prometheus, Grafana, Loki, CloudWatch, PagerDuty |
+| Sécurité | IAM, OIDC, vaulting, SIEM, politiques Zero Trust |
+| Langages & Scripting | Python, Bash, YAML |
 | Systèmes | Linux (Ubuntu, CentOS), Windows Server |
 
 ---
 
-## Projets récents
-### Plateforme AWS industrialisée
-Terraform + GitHub Actions pour fournir une VPC modulaire, IAM durci et déploiement blue/green. Résultat : interruptions réduites de 45 % et observabilité centralisée (CloudWatch + Grafana).
+## Projets marquants
+### AWS Platform Factory
+- Terraform modulaire + GitHub Actions + validations OPA.
+- IAM durci, segmentation réseau fine, secrets HashiCorp Vault.
+- **Impact** : -45 % d'incidents liés à la configuration et visibilité centralisée via Grafana/CloudWatch.
 
-### Chaîne CI/CD conteneurisée
-Pipelines Dockerisés avec analyse Trivy, tests automatisés et notifications Slack. Sept microservices livrés en moins de 8 minutes, zéro CVE critique avant prod.
+### Pipeline DevSecOps conteneurisé
+- Chaîne GitHub Actions + Trivy + tests smoke automatisés.
+- Déploiements blue/green sur AWS ECS avec rollback instantané.
+- **Impact** : livraison < 8 minutes, 0 CVE critique en production sur 9 sprints.
 
-### Monitoring Kubernetes
-Déploiement Prometheus / Grafana via Helm avec alerting PagerDuty et autoscaling piloté par métriques métier. Surprovisionnement diminué de 30 %.
+### Observabilité Kubernetes pilotée métier
+- Stack Prometheus/Grafana déployée via Helm, alertes PagerDuty.
+- Dashboard orienté parcours client, autoscaling basé sur les métriques business.
+- **Impact** : -30 % de surprovisionnement et MTTR divisé par 2.
 
 ---
 
-## Parcours
-- Master Cybersécurité — SUP de Vinci
-- Bachelor Systèmes, Réseaux & Cloud — ESGI
-- DUT Réseaux & Télécoms — IUT Cachan
+## Parcours & reconnaissance
+- **Master Cybersécurité** — SUP de Vinci
+- **Bachelor Systèmes, Réseaux & Cloud** — ESGI
+- **DUT Réseaux & Télécoms** — IUT Cachan
 
 ### Certifications
-- AWS Cloud Practitioner (2023)
+- AWS Certified Cloud Practitioner (2023)
 - Microsoft Azure Fundamentals (AZ-900) — en cours
 
 ---
@@ -54,7 +67,7 @@ Déploiement Prometheus / Grafana via Helm avec alerting PagerDuty et autoscalin
 
 ---
 
-## Contact
+## Restons en contact
 - ✉️ hamdytabsissi@protonmail.com
 - 💼 [LinkedIn](https://linkedin.com/in/hamdytabsissi)
 - 💻 [GitHub](https://github.com/hamdytabsissi)
@@ -62,4 +75,4 @@ Déploiement Prometheus / Grafana via Helm avec alerting PagerDuty et autoscalin
 
 ---
 
-> "Automate everything. Secure everything."
+> « Automate everything. Secure everything. »
