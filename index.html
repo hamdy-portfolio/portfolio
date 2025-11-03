@@ -10,25 +10,14 @@
         font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
         font-size: 16px;
         --bg: radial-gradient(circle at 10% 20%, #0d1b2a 0%, #090b1a 45%, #05070f 100%);
-        --surface: rgba(17, 25, 40, 0.85);
+        --surface: rgba(17, 25, 40, 0.9);
         --surface-soft: rgba(24, 35, 52, 0.85);
-        --border: rgba(148, 163, 184, 0.18);
+        --border: rgba(148, 163, 184, 0.22);
         --text: #f8fafc;
         --muted: #cbd5f5;
-        --accent: #7c5cff;
-        --accent-soft: rgba(124, 92, 255, 0.1);
-        --shadow: 0 20px 40px rgba(15, 23, 42, 0.45);
-      }
-
-      * {
-        --bg: radial-gradient(circle at top right, #1f2937, #0b1120 55%, #05070f 100%);
-        --card: rgba(17, 25, 40, 0.85);
-        --card-border: rgba(148, 163, 184, 0.25);
-        --text: #e2e8f0;
-        --muted: #94a3b8;
         --accent: #38bdf8;
-        --accent-strong: #0ea5e9;
-        --shadow: 0 24px 48px rgba(2, 6, 23, 0.4);
+        --accent-soft: rgba(56, 189, 248, 0.12);
+        --shadow: 0 32px 64px rgba(8, 15, 35, 0.55);
       }
 
       *,
@@ -42,87 +31,69 @@
         min-height: 100vh;
         background: var(--bg);
         color: var(--text);
+        display: flex;
+        justify-content: center;
+        padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 3vw, 2.5rem);
       }
 
       main {
-        max-width: 1080px;
-        margin: 0 auto;
-        padding: 72px 24px 120px;
+        width: min(1080px, 100%);
         display: grid;
-        gap: 2.8rem;
+        gap: 40px;
+      }
+
+      section,
+      header,
+      footer {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 26px;
+        padding: clamp(1.8rem, 3vw, 2.6rem);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(18px);
       }
 
       header {
-        background: linear-gradient(135deg, rgba(124, 92, 255, 0.22), rgba(17, 24, 39, 0.6));
-        border: 1px solid rgba(124, 92, 255, 0.35);
-        border-radius: 24px;
-        padding: clamp(2rem, 4vw, 3.2rem);
-        box-shadow: var(--shadow);
         display: grid;
-        gap: 1.2rem;
-      }
-
-      header p {
-        margin: 0;
+        gap: 1.6rem;
       }
 
       .eyebrow {
         text-transform: uppercase;
-        letter-spacing: 0.24em;
+        letter-spacing: 0.32em;
         font-size: 0.75rem;
-        color: rgba(207, 221, 255, 0.7);
+        color: rgba(207, 221, 255, 0.72);
       }
 
       h1 {
+        font-size: clamp(2.6rem, 5vw, 3.6rem);
         margin: 0;
-        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        line-height: 1.08;
       }
 
-      .intro {
-        font-size: clamp(1.05rem, 2.2vw, 1.3rem);
-        color: rgba(241, 245, 255, 0.85);
+      .lead {
+        font-size: clamp(1.05rem, 2.2vw, 1.28rem);
+        color: rgba(241, 245, 255, 0.82);
         line-height: 1.7;
+        margin: 0;
+      }
 
-        background: var(--bg);
-        color: var(--text);
-        min-height: 100vh;
+      .meta {
         display: flex;
-        justify-content: center;
-        padding: 0 16px 72px;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+        font-size: 0.9rem;
+        color: rgba(203, 213, 225, 0.72);
       }
 
-      main {
-        width: min(1100px, 100%);
-        display: grid;
-        gap: 48px;
-        padding-top: 72px;
-      }
-
-      header {
-        display: grid;
-        gap: 18px;
-        text-align: left;
-      }
-
-      header .eyebrow {
-        letter-spacing: 0.4em;
-        text-transform: uppercase;
-        color: var(--muted);
-        font-size: 0.75rem;
-      }
-
-      h1 {
-        font-size: clamp(2.5rem, 6vw, 3.6rem);
-        margin: 0;
-        font-weight: 700;
-        line-height: 1.1;
-      }
-
-      header p {
-        margin: 0;
-        font-size: 1.1rem;
-        max-width: 640px;
-        color: var(--muted);
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0.55rem 1.2rem;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.32);
+        background: rgba(148, 163, 184, 0.12);
       }
 
       .cta-row {
@@ -131,190 +102,54 @@
         gap: 0.9rem;
       }
 
-      .cta-row a {
+      .cta {
         text-decoration: none;
-        padding: 0.8rem 1.6rem;
-        border-radius: 999px;
         font-weight: 600;
+        padding: 0.85rem 1.6rem;
+        border-radius: 999px;
         transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
       }
 
-      .cta-primary {
-        background: var(--accent);
+      .cta.primary {
+        background: linear-gradient(135deg, var(--accent), #22d3ee);
+        color: #0f172a;
+        box-shadow: 0 18px 30px rgba(14, 165, 233, 0.35);
+      }
+
+      .cta.secondary {
         color: var(--text);
-        box-shadow: 0 12px 24px rgba(124, 92, 255, 0.35);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        background: rgba(148, 163, 184, 0.08);
       }
 
-      .cta-primary:hover,
-      .cta-primary:focus {
+      .cta:hover,
+      .cta:focus {
         transform: translateY(-2px);
-        box-shadow: 0 18px 30px rgba(124, 92, 255, 0.45);
-      }
-
-      .cta-ghost {
-        background: transparent;
-        color: var(--muted);
-        border: 1px solid rgba(207, 221, 255, 0.35);
       }
 
       section {
-        background: var(--surface);
-        border-radius: 22px;
-        padding: clamp(1.8rem, 3vw, 2.4rem);
-        border: 1px solid var(--border);
-        backdrop-filter: blur(12px);
-        box-shadow: var(--shadow);
+        display: grid;
+        gap: 1.6rem;
       }
 
       section h2 {
-        margin-top: 0;
-        font-size: 1.6rem;
-      }
-
-      .values {
-        display: grid;
-        gap: 1.4rem;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      }
-
-      .value-card {
-        background: var(--surface-soft);
-        border-radius: 18px;
-        padding: 1.4rem;
-        border: 1px solid rgba(148, 163, 184, 0.16);
-        display: grid;
-        gap: 0.7rem;
-      }
-
-      .value-card h3 {
-        margin: 0;
-        font-size: 1.1rem;
-      }
-
-      ul {
-        margin: 0;
-        padding-left: 1.1rem;
-        line-height: 1.7;
-      }
-
-      .stack-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 1rem;
-        font-size: 0.98rem;
-      }
-
-      .stack-table th,
-      .stack-table td {
-        text-align: left;
-        padding: 0.6rem 0.4rem;
-        border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-      }
-
-      .projects {
-        display: grid;
-        gap: 1.4rem;
-      }
-
-      .project-card {
-        background: var(--surface-soft);
-        border-radius: 18px;
-        padding: 1.5rem;
-        border: 1px solid rgba(148, 163, 184, 0.16);
-        display: grid;
-        gap: 0.6rem;
-      }
-
-      .project-card h3 {
-        margin: 0;
-        font-size: 1.2rem;
-      }
-
-      .project-card strong {
-        color: #94b0ff;
-      }
-
-      .split {
-        display: grid;
-        gap: 1.6rem;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      }
-
-      .contact-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin: 1.2rem 0 0;
-      }
-
-      .contact-list a {
-        color: var(--text);
-        text-decoration: none;
-        padding: 0.55rem 1rem;
-        border-radius: 14px;
-        border: 1px solid rgba(148, 163, 184, 0.28);
-        background: rgba(148, 163, 184, 0.08);
-        transition: transform 0.2s ease, border 0.2s ease;
-      }
-
-      .contact-list a:hover,
-      .contact-list a:focus {
-        transform: translateY(-2px);
-        border-color: rgba(124, 92, 255, 0.5);
-        gap: 14px;
-        margin-top: 12px;
-      }
-
-      .cta {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 10px 18px;
-        border-radius: 999px;
-        border: 1px solid var(--card-border);
-        color: var(--text);
-        text-decoration: none;
-        background: rgba(14, 116, 144, 0.15);
-        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-      }
-
-      .cta.primary {
-        background: linear-gradient(135deg, var(--accent-strong), #22d3ee);
-        color: #0f172a;
-        font-weight: 600;
-        box-shadow: 0 16px 32px rgba(14, 165, 233, 0.3);
-      }
-
-      .cta:hover {
-        transform: translateY(-2px);
-        border-color: rgba(125, 211, 252, 0.65);
-      }
-
-      section {
-        display: grid;
-        gap: 24px;
-      }
-
-      .section-title {
         font-size: 1.8rem;
         margin: 0;
       }
 
-      .cards {
+      .grid {
         display: grid;
+        gap: 1.4rem;
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 24px;
       }
 
       .card {
-        background: var(--card);
-        border: 1px solid var(--card-border);
-        border-radius: 22px;
-        padding: 28px;
+        background: var(--surface-soft);
+        border-radius: 20px;
+        padding: 1.4rem;
+        border: 1px solid rgba(148, 163, 184, 0.2);
         display: grid;
-        gap: 16px;
-        box-shadow: var(--shadow);
-        backdrop-filter: blur(12px);
+        gap: 0.8rem;
       }
 
       .card h3 {
@@ -325,8 +160,15 @@
       .card p,
       .card li {
         margin: 0;
-        color: var(--muted);
+        color: rgba(203, 213, 225, 0.78);
         line-height: 1.6;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.1rem;
+        display: grid;
+        gap: 0.6rem;
       }
 
       .impact-tag {
@@ -334,32 +176,32 @@
         align-items: center;
         gap: 6px;
         font-size: 0.85rem;
-        padding: 6px 12px;
+        padding: 0.45rem 0.9rem;
         border-radius: 999px;
-        background: rgba(56, 189, 248, 0.12);
+        background: var(--accent-soft);
         color: var(--accent);
+        width: fit-content;
       }
 
       table {
         width: 100%;
         border-collapse: collapse;
-        background: var(--card);
-        border: 1px solid var(--card-border);
+        background: var(--surface-soft);
         border-radius: 22px;
         overflow: hidden;
-        box-shadow: var(--shadow);
+        border: 1px solid rgba(148, 163, 184, 0.2);
       }
 
       thead {
-        background: rgba(15, 23, 42, 0.8);
-        color: var(--muted);
+        background: rgba(15, 23, 42, 0.82);
+        color: rgba(203, 213, 225, 0.8);
       }
 
       th,
       td {
-        padding: 16px 20px;
+        padding: 0.85rem 1.2rem;
         text-align: left;
-        border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.16);
       }
 
       tbody tr:last-child td {
@@ -368,72 +210,50 @@
 
       .timeline {
         display: grid;
-        gap: 18px;
-      }
-
-      .timeline-item {
-        display: grid;
-        gap: 6px;
-        padding-left: 12px;
-        border-left: 2px solid rgba(56, 189, 248, 0.4);
+        gap: 1rem;
       }
 
       .timeline-item strong {
         font-size: 1.05rem;
       }
 
-      footer {
-        text-align: center;
-        color: var(--muted);
-        font-size: 0.9rem;
-        margin-top: 32px;
-      }
-
-      .contact-grid {
+      .contact-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 16px;
-        align-items: center;
+        gap: 0.8rem;
       }
 
-      .contact-grid a,
-      .contact-grid span {
-        color: var(--accent);
+      .contact-list a {
         text-decoration: none;
+        color: var(--text);
+        padding: 0.65rem 1.1rem;
+        border-radius: 14px;
+        border: 1px solid rgba(148, 163, 184, 0.28);
+        background: rgba(148, 163, 184, 0.1);
+        transition: transform 0.2s ease, border 0.2s ease;
       }
 
-      blockquote {
-        margin: 0;
-        font-style: italic;
-        color: rgba(203, 213, 225, 0.75);
-        text-align: center;
+      .contact-list a:hover,
+      .contact-list a:focus {
+        transform: translateY(-2px);
+        border-color: rgba(56, 189, 248, 0.5);
       }
 
       footer {
         text-align: center;
-        color: rgba(148, 163, 184, 0.65);
-        font-size: 0.85rem;
-        padding: 18px 24px;
-        border-left: 4px solid var(--accent);
-        background: rgba(148, 163, 184, 0.08);
-        border-radius: 14px;
-        color: var(--muted);
-        font-style: italic;
+        color: rgba(203, 213, 225, 0.75);
+        font-size: 0.88rem;
       }
 
       @media (max-width: 720px) {
-        main {
-          padding: 56px 18px 96px;
+        body {
+          padding: 2rem 1rem;
         }
 
-        header {
-          border-radius: 18px;
-        }
-
-        section {
-          border-radius: 18px;
-          gap: 40px;
-          padding-top: 56px;
+        section,
+        header,
+        footer {
+          border-radius: 20px;
         }
 
         .cta-row {
@@ -455,23 +275,23 @@
         }
 
         tbody tr {
-          border-bottom: 1px solid rgba(148, 163, 184, 0.15);
-          margin-bottom: 16px;
-          padding-bottom: 16px;
+          border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+          margin-bottom: 1rem;
+          padding-bottom: 1rem;
         }
 
         td {
-          padding: 8px 0;
+          padding: 0.6rem 0;
         }
 
         td::before {
           content: attr(data-label);
           display: block;
-          font-size: 0.75rem;
+          font-size: 0.74rem;
           text-transform: uppercase;
-          letter-spacing: 0.2em;
-          color: var(--muted);
-          margin-bottom: 4px;
+          letter-spacing: 0.22em;
+          color: rgba(148, 163, 184, 0.7);
+          margin-bottom: 0.25rem;
         }
       }
     </style>
@@ -481,296 +301,147 @@
       <header>
         <span class="eyebrow">Cloud &amp; DevSecOps Engineer</span>
         <h1>Hamdy TABSISSI</h1>
-        <p class="intro">
-          J'accompagne les équipes produit à lancer des plateformes Cloud fiables et auditées, de l'automatisation Terraform
-          aux pipelines GitHub Actions, en passant par l'observabilité continue. Basé entre <strong>Paris</strong> et
-          <strong>Melbourne</strong>, je recherche des défis internationaux où vitesse et sécurité s'élèvent ensemble.
+        <p class="lead">
+          Ingénieur franco-australien qui accompagne les équipes produit dans la conception de plateformes Cloud résilientes,
+          sécurisées et observables. Du Terraform à GitHub Actions en passant par la gouvernance Zero Trust, j'aligne vitesse de
+          livraison et exigence sécurité.
         </p>
-        <div class="cta-row">
-          <a class="cta-primary" href="mailto:hamdytabsissi@protonmail.com">Discutons d'un projet</a>
-          <a class="cta-ghost" href="https://linkedin.com/in/hamdytabsissi">Voir mon LinkedIn</a>
+        <div class="meta">
+          <span class="pill">Basé entre <strong>Paris</strong> &amp; <strong>Melbourne</strong></span>
+          <span class="pill">Ouvert aux missions internationales</span>
         </div>
-      </header>
-
-      <section>
-        <h2>Ce qui me motive</h2>
-        <div class="values">
-          <div class="value-card">
-            <h3>Sécurité = vélocité</h3>
-            <p>
-              Concevoir des architectures où la protection des données et la conformité se construisent dans chaque sprint, pas en
-              post-traitement.
-            </p>
-          </div>
-          <div class="value-card">
-            <h3>Expérience développeur</h3>
-            <p>
-              Fournir des pipelines auto-documentés, observables et fiables pour que les équipes puissent livrer sans friction.
-            </p>
-          </div>
-          <div class="value-card">
-            <h3>Mesure d'impact</h3>
-            <p>
-              Traduire les objectifs métiers en SLO, budgets et tableaux de bord afin de piloter la valeur délivrée.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Engagements DevSecOps</h2>
-        <ul>
-          <li><strong>Zero Trust pragmatique :</strong> IAM durci, secrets renouvelés, revues d'accès automatisées.</li>
-          <li><strong>Pipelines sans friction :</strong> lint, tests, scans de sécurité et déploiements blue/green orchestrés.</li>
-          <li><strong>Traçabilité totale :</strong> observabilité partagée (logs, métriques, alertes) pour des décisions éclairées.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Stack de prédilection</h2>
-        <table class="stack-table">
-          <tr>
-            <th>Domaine</th>
-            <th>Outils &amp; technologies</th>
-          </tr>
-          <tr>
-            <td>Cloud</td>
-            <td>AWS (EKS, ECS, Lambda), Azure, GCP</td>
-          </tr>
-          <tr>
-            <td>Infrastructure as Code</td>
-            <td>Terraform, Terragrunt, Ansible, Helm</td>
-          </tr>
-          <tr>
-            <td>CI/CD</td>
-            <td>GitHub Actions, GitLab CI, Jenkins, Argo CD</td>
-          </tr>
-          <tr>
-            <td>Conteneurs</td>
-            <td>Docker, Kubernetes, AWS ECS/EKS</td>
-          </tr>
-          <tr>
-            <td>Sécurité</td>
-            <td>AWS IAM, Azure AD, Vault, Security Hub, Trivy</td>
-          </tr>
-          <tr>
-            <td>Observabilité</td>
-            <td>Prometheus, Grafana, Loki, CloudWatch, PagerDuty</td>
-          </tr>
-          <tr>
-            <td>Langages</td>
-            <td>Python, Bash, Go (initiation), YAML</td>
-          </tr>
-          <tr>
-            <td>Collaboration</td>
-            <td>Git, Notion, Jira, Miro</td>
-          </tr>
-        </table>
-      </section>
-
-      <section>
-        <h2>Projets à impact</h2>
-        <div class="projects">
-          <article class="project-card">
-            <h3>Plateforme AWS sécurisée et industrialisée</h3>
-            <p>
-              Déploiement modulaire (VPC, EKS, RDS) avec Terraform + Terragrunt et pipelines GitHub Actions incluant tests,
-              scans Trivy et blue/green.
-            </p>
-            <p><strong>➜ 45&nbsp;% d'incidents critiques en moins</strong> grâce à une observabilité centralisée (CloudWatch + Grafana).</p>
-          </article>
-          <article class="project-card">
-            <h3>Chaîne CI/CD conteneurisée multi-équipes</h3>
-            <p>
-              Dockerisation de 7 microservices, politiques d'images signées et CI GitHub Actions (unitaires, SAST, quality gate)
-              avec notifications Slack ciblées.
-            </p>
-            <p><strong>➜ Livraisons en &lt; 8 minutes</strong> et zéro CVE critique avant production.</p>
-          </article>
-          <article class="project-card">
-            <h3>Observabilité Kubernetes pilotée par l'usage</h3>
-            <p>
-              Helm charts custom pour Prometheus, Grafana et Loki reliés aux métriques métier, alerting PagerDuty et runbooks
-              dynamiques.
-            </p>
-            <p><strong>➜ 30&nbsp;% de surprovisionnement en moins</strong> via un autoscaling basé sur la demande réelle.</p>
-        <p>
-          Ingénieur franco-australien basé entre Paris et Melbourne. Je conçois des plateformes Cloud où l'automatisation et la
-          sécurité avancent au même rythme que la livraison produit.
-        </p>
         <div class="cta-row">
           <a class="cta primary" href="mailto:hamdytabsissi@protonmail.com">Discutons d'un projet</a>
-          <a class="cta" href="https://linkedin.com/in/hamdytabsissi" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="cta" href="https://github.com/hamdytabsissi" target="_blank" rel="noopener">GitHub</a>
+          <a class="cta secondary" href="https://linkedin.com/in/hamdytabsissi" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="cta secondary" href="https://github.com/hamdytabsissi" target="_blank" rel="noopener">GitHub</a>
         </div>
       </header>
 
-      <section aria-labelledby="valeurs">
-        <h2 id="valeurs" class="section-title">Ce que j'apporte</h2>
-        <div class="cards">
+      <section aria-labelledby="about">
+        <h2 id="about">Synthèse du profil LinkedIn</h2>
+        <div class="grid">
           <article class="card">
-            <h3>Automatisation guidée par la sécurité</h3>
+            <h3>DevSecOps pragmatique</h3>
             <p>
-              Pipelines IaC, contrôles OPA, tests d'intégration et revue de code systématique pour livrer sans dette invisible.
+              Pipelines IaC et CI/CD industrialisés (Terraform, Terragrunt, GitHub Actions) avec contrôles de sécurité intégrés,
+              validations OPA et approbations contextualisées.
             </p>
-            <span class="impact-tag">+100% de conformité sur les revues d'accès</span>
+            <span class="impact-tag">+100 % de conformité sur les revues d'accès</span>
           </article>
           <article class="card">
-            <h3>Plateformes résilientes</h3>
+            <h3>Plateformes Cloud observables</h3>
             <p>
-              Observabilité orientée produit, SLO partagés, alertes actionnables et post-mortems pilotés par les données.
+              Architectures AWS &amp; Azure instrumentées (Prometheus, Grafana, CloudWatch, PagerDuty) pour piloter budgets, SLO et
+              décisions produit en temps réel.
             </p>
             <span class="impact-tag">MTTR divisé par 2</span>
           </article>
           <article class="card">
-            <h3>Culture DevSecOps</h3>
+            <h3>Culture sécurité embarquée</h3>
             <p>
-              Coaching, pair programming et documentation vivante pour embarquer les équipes dans la sécurité continue.
+              Coaching des squads produit, documentation vivante et rituels post-mortem afin d'ancrer la sécurité dans chaque sprint.
             </p>
-            <span class="impact-tag">Adoption CI/CD +35%</span>
+            <span class="impact-tag">Adoption CI/CD +35&nbsp;%</span>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="experience">
+        <h2 id="experience">Expériences marquantes</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Plateforme AWS sécurisée et industrialisée</h3>
+            <p>
+              Déploiement modulaire (VPC, EKS, RDS) avec Terraform &amp; Terragrunt, pipelines GitHub Actions incluant tests,
+              scans Trivy et déploiements blue/green.
+            </p>
+            <ul>
+              <li>Automatisation des contrôles IAM et renouvellement des secrets</li>
+              <li>Tableau de bord de conformité partagé (CloudWatch + Grafana)</li>
+            </ul>
+            <span class="impact-tag">-45&nbsp;% d'incidents critiques</span>
+          </article>
+          <article class="card">
+            <h3>Chaîne CI/CD conteneurisée multi-équipes</h3>
+            <p>
+              Dockerisation de microservices, politiques d'images signées et pipeline GitHub Actions (tests, SAST, quality gate)
+              avec notifications Slack ciblées.
+            </p>
+            <ul>
+              <li>Gestion des secrets via IAM OIDC</li>
+              <li>Déploiements blue/green ECS avec rollback instantané</li>
+            </ul>
+            <span class="impact-tag">Livraisons &lt; 8 minutes</span>
+          </article>
+          <article class="card">
+            <h3>Observabilité Kubernetes pilotée métier</h3>
+            <p>
+              Helm charts custom Prometheus, Grafana &amp; Loki reliés aux métriques produit, alerting PagerDuty et runbooks dynamiques.
+            </p>
+            <ul>
+              <li>Dashboards orientés parcours utilisateur</li>
+              <li>Autoscaling basé sur la demande réelle</li>
+            </ul>
+            <span class="impact-tag">-30&nbsp;% de surprovisionnement</span>
           </article>
         </div>
       </section>
 
       <section aria-labelledby="skills">
-        <h2 id="skills" class="section-title">Stack de prédilection</h2>
+        <h2 id="skills">Compétences clés</h2>
         <table>
           <thead>
             <tr>
               <th>Domaine</th>
-              <th>Technologies clés</th>
+              <th>Technologies &amp; pratiques</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td data-label="Domaine">Cloud</td>
-              <td data-label="Technologies clés">AWS, Azure, GCP</td>
+              <td data-label="Technologies &amp; pratiques">AWS (EKS, ECS, Lambda), Azure, GCP</td>
             </tr>
             <tr>
               <td data-label="Domaine">Infrastructure as Code</td>
-              <td data-label="Technologies clés">Terraform, Terragrunt, Ansible, Helm</td>
+              <td data-label="Technologies &amp; pratiques">Terraform, Terragrunt, Ansible, Helm</td>
             </tr>
             <tr>
               <td data-label="Domaine">CI/CD</td>
-              <td data-label="Technologies clés">GitHub Actions, Jenkins, GitLab CI, Argo CD</td>
+              <td data-label="Technologies &amp; pratiques">GitHub Actions, GitLab CI, Jenkins, Argo CD</td>
             </tr>
             <tr>
               <td data-label="Domaine">Conteneurs &amp; orchestration</td>
-              <td data-label="Technologies clés">Docker, Kubernetes, ECS/EKS, Helmfile</td>
-            </tr>
-            <tr>
-              <td data-label="Domaine">Observabilité</td>
-              <td data-label="Technologies clés">Prometheus, Grafana, Loki, CloudWatch, PagerDuty</td>
+              <td data-label="Technologies &amp; pratiques">Docker, Kubernetes, AWS ECS/EKS, Helmfile</td>
             </tr>
             <tr>
               <td data-label="Domaine">Sécurité</td>
-              <td data-label="Technologies clés">IAM, OIDC, vaulting, SIEM, politiques Zero Trust</td>
+              <td data-label="Technologies &amp; pratiques">IAM, OIDC, Vault, Security Hub, Trivy, politiques Zero Trust</td>
+            </tr>
+            <tr>
+              <td data-label="Domaine">Observabilité</td>
+              <td data-label="Technologies &amp; pratiques">Prometheus, Grafana, Loki, CloudWatch, PagerDuty</td>
             </tr>
             <tr>
               <td data-label="Domaine">Langages &amp; scripting</td>
-              <td data-label="Technologies clés">Python, Bash, YAML</td>
+              <td data-label="Technologies &amp; pratiques">Python, Bash, Go (initiation), YAML</td>
             </tr>
             <tr>
-              <td data-label="Domaine">Systèmes</td>
-              <td data-label="Technologies clés">Linux (Ubuntu, CentOS), Windows Server</td>
+              <td data-label="Domaine">Collaboration</td>
+              <td data-label="Technologies &amp; pratiques">Git, Notion, Jira, Miro</td>
             </tr>
           </tbody>
         </table>
       </section>
 
-      <section aria-labelledby="projects">
-        <h2 id="projects" class="section-title">Projets à impact</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>AWS Platform Factory</h3>
-            <p>
-              Terraform modulaire, validations OPA et secrets Vault pour déployer une VPC multi-environnements avec IAM durci.
-            </p>
-            <ul>
-              <li>GitHub Actions + plans automatisés + approbations ciblées</li>
-              <li>Observabilité centralisée Grafana/CloudWatch</li>
-            </ul>
-            <span class="impact-tag">-45 % d'incidents de configuration</span>
-          </article>
-          <article class="card">
-            <h3>Pipeline DevSecOps conteneurisé</h3>
-            <p>
-              Build multi-stage, scans Trivy, smoke tests et déploiement blue/green sur AWS ECS avec rollback instantané.
-            </p>
-            <ul>
-              <li>Secrets GitHub gérés via OIDC &amp; IAM</li>
-              <li>Notifications Slack contextualisées</li>
-            </ul>
-            <span class="impact-tag">Livraison &lt; 8 minutes</span>
-          </article>
-          <article class="card">
-            <h3>Observabilité Kubernetes pilotée métier</h3>
-            <p>
-              Stack Prometheus / Grafana déployée via Helm, alerting PagerDuty et autoscaling basé sur les métriques business.
-            </p>
-            <ul>
-              <li>Dashboards orientés parcours utilisateur</li>
-              <li>Runbooks dynamiques &amp; post-mortems automatisés</li>
-            </ul>
-            <span class="impact-tag">-30 % de surprovisionnement</span>
-          </article>
-        </div>
-      </section>
-
-      <section>
-        <h2>Parcours &amp; certifications</h2>
-        <div class="split">
-          <div>
-            <h3>Parcours</h3>
-            <ul>
-              <li>Master Cybersécurité — SUP de Vinci</li>
-              <li>Bachelor Systèmes, Réseaux &amp; Cloud — ESGI</li>
-              <li>DUT Réseaux &amp; Télécoms — IUT Cachan</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Certifications</h3>
-            <ul>
-              <li>AWS Cloud Practitioner (2023)</li>
-              <li>Microsoft Azure Fundamentals (AZ-900) — en cours</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Langues &amp; ouverture</h2>
-        <ul>
-          <li>Français — natif</li>
-          <li>Anglais — professionnel (Toronto, ILAC)</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Contact</h2>
-        <p>Discutons de vos ambitions Cloud et DevSecOps :</p>
-        <div class="contact-list">
-          <a href="mailto:hamdytabsissi@protonmail.com">✉️ E-mail</a>
-          <a href="https://linkedin.com/in/hamdytabsissi">💼 LinkedIn</a>
-          <a href="https://github.com/hamdytabsissi">💻 GitHub</a>
-          <a href="https://hamdytabsissi.github.io/Portfolio-Ambi">🌐 Portfolio</a>
-        </div>
-      </section>
-
-      <section>
-        <blockquote>« Automate everything. Secure everything. »</blockquote>
-      </section>
-
-      <footer>© 2024 Hamdy TABSISSI — Cloud &amp; DevSecOps Engineer</footer>
       <section aria-labelledby="journey">
-        <h2 id="journey" class="section-title">Parcours &amp; certifications</h2>
-        <div class="cards">
+        <h2 id="journey">Parcours &amp; certifications</h2>
+        <div class="grid">
           <article class="card">
             <h3>Formation</h3>
             <div class="timeline">
               <div class="timeline-item">
                 <strong>Master Cybersécurité</strong>
-                <span>SUP de Vinci — La Défense</span>
+                <span>SUP de Vinci</span>
               </div>
               <div class="timeline-item">
                 <strong>Bachelor Systèmes, Réseaux &amp; Cloud</strong>
@@ -783,13 +454,10 @@
             </div>
           </article>
           <article class="card">
-            <h3>Certifications</h3>
+            <h3>Certifications &amp; langues</h3>
             <ul>
               <li>AWS Certified Cloud Practitioner (2023)</li>
               <li>Microsoft Azure Fundamentals (AZ-900) — en cours</li>
-            </ul>
-            <h3>Langues</h3>
-            <ul>
               <li>Français — natif</li>
               <li>Anglais — professionnel (Toronto, ILAC)</li>
             </ul>
@@ -798,19 +466,19 @@
       </section>
 
       <section aria-labelledby="contact">
-        <h2 id="contact" class="section-title">Restons en contact</h2>
-        <div class="card">
-          <div class="contact-grid">
-            <span>✉️ <a href="mailto:hamdytabsissi@protonmail.com">hamdytabsissi@protonmail.com</a></span>
-            <a href="https://linkedin.com/in/hamdytabsissi" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/hamdytabsissi" target="_blank" rel="noopener">GitHub</a>
-            <a href="https://hamdytabsissi.github.io/Portfolio-Ambi" target="_blank" rel="noopener">Portfolio Web</a>
-          </div>
-          <blockquote>« Automate everything. Secure everything. »</blockquote>
+        <h2 id="contact">Restons en contact</h2>
+        <p>
+          Parlons de fiabilité, sécurité et delivery produit : je serai ravi d'apporter la vision DevSecOps décrite sur LinkedIn à vos défis Cloud.
+        </p>
+        <div class="contact-list">
+          <a href="mailto:hamdytabsissi@protonmail.com">✉️ hamdytabsissi@protonmail.com</a>
+          <a href="https://linkedin.com/in/hamdytabsissi" target="_blank" rel="noopener">💼 linkedin.com/in/hamdytabsissi</a>
+          <a href="https://github.com/hamdytabsissi" target="_blank" rel="noopener">💻 github.com/hamdytabsissi</a>
+          <a href="https://hamdytabsissi.github.io/Portfolio-Ambi" target="_blank" rel="noopener">🌐 Portfolio historique</a>
         </div>
       </section>
 
-      <footer>© 2024 Hamdy TABSISSI — Basé entre Paris &amp; Melbourne</footer>
+      <footer>© 2024 Hamdy TABSISSI — Cloud &amp; DevSecOps Engineer</footer>
     </main>
   </body>
 </html>
